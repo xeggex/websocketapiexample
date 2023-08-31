@@ -6,13 +6,13 @@ const WebSocket = require( 'ws' );
 
 module.exports = class XeggexSocketClient extends EventEmitter {
 
-    constructor( apiKey, secretKey, wssHost = "wss://ws.xeggex.com") {
+    constructor( apiKey, secretKey, wssHost = "wss://api.xeggex.com") {
     
     	super();
     	
         this._apiKey = apiKey;
         this._secretKey = secretKey;
-        this._wssHost = wssHost || "wss://ws.xeggex.com";
+        this._wssHost = wssHost || "wss://api.xeggex.com";
 
         this._wss = null;
         this._pingTimeout = null;
